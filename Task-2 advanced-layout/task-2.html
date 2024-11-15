@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WATCH.IT</title>
+    </head>
+    <body>
+        <div class="navigation">
+            <!--title-->
+            <div id="logo">Watch.It</div>
+            <div class="nav">
+                <div id="nav1">ROMANCE</div>
+                <div id="nav2">DRAMA</div>
+                <div id="nav3"><b>ACTION</b></div>
+                <div id="nav4"><b>COMEDY</b></div>
+            </div>
+            <!--Search button-->
+            <button type="button" id="search">SEARCH</button>
+        </div>
+
+        <!--for main movies content-->
+        <div class="maincontent">
+            <div class="mov-1">
+                <div class="img-1"><img src="barbie.jpg"></div>
+                <p class="info-6">
+                    Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to 
+                    the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines 
+                    what it means to dream big!
+                </p>
+                <!--add button for watch now-->
+                <button type="button" id="button1">WATCH NOW</button>
+            </div>
+            
+            <div class="mov-2">
+                <div class="img-2"><img src="palm-springs.jpg"></div>
+                <p class="info-2">
+                  A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day,
+                  two strangers find love, chaos, and meaning in the most unexpected ways.
+                </p>
+                <!--add button for watch now-->
+                <button type="button" id="button2">WATCH NOW</button>
+            </div>
+
+            <div class="mov-3">
+                <div class="img-3"><img src="la-la-land.jpg"></div>
+                <p class="info-3">
+                   Love, dreams, and the magic of LA take center stage in this musical masterpiece.
+                   Watch as two starry-eyed artists navigate passion and ambition in a world where 
+                   every moment feels like a cinematic spectacle!
+                </p>
+                <!--add button for watch now-->
+                <button type="button" id="button3">WATCH NOW</button>
+            </div>
+
+            <div class="mov-4">
+                <div class="img-4"><img src="hidden-figures.jpg"></div>
+                <p class="info-4">
+                  Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. 
+                  Battling discrimination and defying the odds, these brilliant African-American women prove that 
+                  intelligence, perseverance, and unity can change history and break barriers.
+                </p>
+                <!--add button for watch now-->
+                <button type="button" id="button4">WATCH NOW</button>
+            </div>
+
+            <div class="mov-5">
+                <div class="img-5"><img src="hook.jpg"></div>
+                <p class="info-5">
+                    Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter,
+                    who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure,
+                    magic, and nostalgia blend in this timeless family classic.
+                </p>
+                <!--add button for watch now-->
+                <button type="button" id="button5">WATCH NOW</button>
+            </div>
+
+            <div class="mov-6">
+                <div class="img-6"><img src="who-framed-roger-rabbit.jpg"></div>
+                <p class="info-6">
+                    In a world where cartoons and humans coexist, a detective must solve a zany,    high-stakes mystery. 
+                    Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into
+                    a world where anything is possible!
+                </p>
+
+                <!--'WATCH NOW' is in two different lines so the words can match two lines that are seen
+                in the wireframes. This code is both for CSS and HTML working together. -->
+                <button type="button" id="button6">WATCH NOW</button>
+            </div>
+        </div>
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+/* Teko Font Family */
+.teko-regular {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+/* Lato Font Family */
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Desktop Wireframe (Default)
+  Note:
+  All spacings are as indicated from the specification, except for certain paddings, width and hight are adjusted to look
+  like the wireframe. Flexbox is used in the navigation, and adjust images to the containers. Anything else are divided into grids.
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  background-color: #070410;
+  color: #070410;
+}
+
+img {
+  object-fit: cover;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+button {
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  background-color: #ffffff;
+  color: #070410;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+}
+/* add hover effect for button */
+button:hover {
+  background-color: #070410;
+  color: white;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Navigation bar */
+.navigation {
+  padding: 16px;  /* Small spacing */
+  grid-row: 1/2;
+  background-color: #070410;
+  color: white;
+  display: flex; 
+  flex-direction: row;
+  align-items: baseline;
+  gap: 48px;  /* Large spacing for Desktop */
+  box-shadow: 0 10px 0px 0px #4DCCBD;
+}
+/* logo style */
+#logo {
+  font-family: "Teko", sans-serif;
+  padding-left: 48px;  /* Large space for Desktop */
+  font-size: 3em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2.5;
+  justify-content: center;
+  gap: 48px;  /* Large space for Desktop */
+  position: relative;
+  top: -10%;
+}
+
+.nav div:hover {
+  color: #EEF36A;
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+#nav1 {
+  grid-column: 1/2;
+  padding-right: 16px;
+}
+
+#nav2 {
+  grid-column: 2/3;
+  padding-right: 16px;
+}
+
+#nav3 {
+  grid-column: 3/4;
+  padding-right: 16px;
+}
+
+#nav4 {
+  grid-column: 4/5;
+  padding-right: 16px;
+}
+/*  This is for search button */
+#search {
+  flex-grow: 0.4;
+  padding: 5px 16px 5px 16px;
+  background-color: #EEF36A;  /* Yellow  color*/
+  color: #070401;  /* black text */
+}
+#search:hover {
+  background-color: #4DCCBD;  /*blue hover effect*/
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.maincontent {
+  display: grid;
+  grid-template-rows: 450px 800px 450px 450px 450px 10px;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 48px;          /* Large space for Desktop */
+  column-gap: 48px;       /* Large space for Desktop */
+  padding-inline: 48px;   /* Large space for Desktop */
+  margin-top: 48px;       /* Large space for Desktop */
+  grid-row: 2/4;
+  max-width: 900px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Movie box containers, all are specified to have small type spacings.
+Note: To make styling more interactive, the classes that require the same properties are called normally but separated with commas
+I learned this in the second part.
+*/
+.mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+  font-size: 1.5em;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  height: 450px;
+}
+.mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+  background-color: #FFFFFF;  /* White */
+  box-shadow: 16px 16px #231651;  /* indigo blue shadow */
+}
+.mov-1, .mov-4, .mov-5, .mov-6 {
+  grid-column: 1/3;
+}
+.mov-1:hover, .mov-2:hover, .mov-3:hover, .mov-4:hover, .mov-5:hover, .mov-6:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgb(254, 254, 2);
+  transition: all 0.3s ease;
+}
+
+.info-1, .info-2, .info-3, .info-4, .info-5, .info-6 {
+  grid-area: info;
+  text-align: left;
+  padding-inline: 16px;
+  align-self:first baseline;
+}
+
+.info-1, .info-4, .info-5, .info-6 {
+  margin-top: 16px;
+}
+
+#button1, #button2, #button3, #button4, #button5, #button6 {
+  grid-area: button;
+  background-color: #070410; /*black*/
+  color: white;
+}
+
+#button2, #button3, #button4, #button5, #button6 {
+  margin: 16px;
+}
+#button1, #button2, #button3, #button4, #button5, #button6 {
+  background-color: #231651;  /* Indigo blue */
+  color: #FFFFFF;
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover, #button5:hover, #button6:hover {
+  background-color: #070401;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgb(77, 204, 189);
+  transition: all 0.3s ease;
+}
+
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6 {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+/* Add spacing inbetween areas in grid-template-areas.A dot is added to the ascertain the 'space' */
+.mov-1 {
+  grid-template-rows: 1fr 16px 1fr;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:
+  "image image image"
+  ". . button"
+  "info info button";
+}
+
+#button1 {
+  margin-right: 16px;
+  object-fit: cover;
+  padding: .75em;
+  width: 75%;
+  justify-self: right;
+}
+
+.info-1 {
+  width: 100%;
+}
+
+.img-1 img {
+  height: 220px;
+}
+
+.mov-2, .mov-3 {
+  display: grid; 
+  grid-template-rows: 200px 200px 250px 150px;
+  grid-template-columns: none;
+  grid-template-areas: 
+  "image"
+  "image"
+  "info"
+  "button";
+  height: 800px;
+}
+
+.info-2, .info-3 {
+  padding-top: 16px;
+}
+
+.img-2 img, .img-3 img {
+  height: 400px;
+}
+
+.mov-4, .mov-5, .mov-6 {
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+  "image image info info"
+  "image image button button";
+}
+
+.img-4 img, .img-5 img, .img-6 img {
+  height: 450px;
+}
+
+/* Tablet Wireframe 
+  ------------------
+  Note: One thing I'd like to point out here is that the blueprint for the movie layouts in Tablet are
+  repeated from the Desktop Wireframe, specifically the unique layouts of both .mov2 and .mov3. Of course
+  margins, paddings and spacings get carried over in the @media screen layouts so in order to rewrite them, a lot
+  of my CSS includes 0 values for properties, this essentially resets what was previously there and responds to the new grids and
+  spacings I create in the @media screens. This can also be seen back in part 1.
+*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+/* logo style */
+  #logo {
+    font-size: 2em;
+  }
+
+  .maincontent {
+    grid-template-rows: repeat(3,950px);
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 32px;
+    column-gap: 32px;
+    padding-inline: 32px;
+    margin-top: 32px;
+    max-width: 900px;
+    padding-bottom: 32px;
+  }
+  
+  .mov-1, .mov-2 {
+    grid-row: 1/2;
+  }
+
+  .mov-3, .mov-4 {
+    grid-row: 2/3;
+  }
+
+  .mov-5, .mov-6 {
+    grid-row: 3/4;
+  }
+
+  .mov-1, .mov-3, .mov-5 {
+    grid-column: 1/2;
+  }
+
+  .mov-2, .mov-4, .mov-6 {
+    grid-column: 2/3;
+  }
+
+  .mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+    display: grid; 
+    grid-template-rows: 200px 200px 250px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "image image"
+    "image image"
+    "info info"
+    "button button"
+    "button button";
+    height: 950px;
+  }
+  
+  .info-1, .info-2, .info-3, .info-4, .info-5, .info-6 {
+    width: 90%;
+    height: 70%;
+    padding-top: 16px;
+  }
+  
+  .img-1 img, .img-2 img, .img-3 img, .img-4 img, .img-5 img, .img-6 img {
+    height: 400px;
+  }
+
+  /* In order to detect the line skip from the HTML code for 'WATCH NOW' the property 'white-space' is given 'pre-line' */
+  #button1, #button2, #button3, #button4, #button5, #button6 {
+    padding-inline: 16px;
+    margin-right: 0;
+    margin-left: 0;
+    object-fit: cover;
+    padding: .4em;
+    justify-self: center;
+    width: 95%;
+    height: 60%;
+    white-space: pre-line;
+  }
+  .info-1, .info-4, .info-5, .info-6 {
+    margin-top: 0;
+  }
+}
+
+/* Mobile Wireframe
+  ------------------
+Note: Everything here is otherwise copied from tablet, yeah with the certain changes being the single column movies.
+The nav options from the navigation dissapear from the wireframe, so in order to replicate a similar output, the
+nav is are called and then set to display: none;. The box shadows in the wireframe are designed in a way that make it like
+there are borders separating each movie, so I had to rewrite the direction of the box shadow and place it underneath each 
+.mov class container.
+*/
+@media screen and (min-width: 360px) and (max-width: 720px) {
+
+  .navigation { box-shadow: 0 16px 0px 0px #EEF36A; }
+
+  #nav1, #nav2, #nav3, #nav4 { display: none; }
+/* logo style */
+  #logo {
+    font-size: 2em;
+  }
+
+  .maincontent {
+    padding-top: 16px;
+    grid-template-rows: repeat(6,800px);
+    grid-template-columns: auto;
+    row-gap: 16px;
+    column-gap: 0;
+    padding-inline: 0;
+    margin-top: 0;
+    max-width: 900px;
+    padding-bottom: 16px;
+    box-shadow: 0 16px 0px 0px #4DCCBD;
+  }
+
+  .mov-1 { grid-row: 1/2;}
+  .mov-2 { grid-row: 2/3;}
+  .mov-3 { grid-row: 3/4;}
+  .mov-4 { grid-row: 4/5;}
+  .mov-5 { grid-row: 5/6;}
+
+  .mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+    box-shadow: 0 16px 0px 0px #4DCCBD;
+    grid-column: 1/2;
+    display: grid; 
+    grid-template-rows: 200px 200px 200px 100px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "image image"
+    "image image"
+    "info info"
+    "button button"
+    "button button";
+    height: 800px;
+  }
+  
+  .info-1, .info-2, .info-3, .info-4, .info-5, .info-6 {
+    width: 90%;
+    height: 70%;
+    padding-top: 16px;
+  }
+  
+  .img-1 img, .img-2 img, .img-3 img, .img-4 img, .img-5 img, .img-6 img {
+    height: 400px;
+  }
+
+  /*to prevent the words 'WATCH NOW' from being separated, the line skip is not counted anymore by setting white-space
+  to none; */
+  #button1, #button2, #button3, #button4, #button5, #button6 {
+    padding-inline: 0;
+    margin-right: 0;
+    margin-left: 0;
+    object-fit: cover;
+    padding: .4em;
+    width: 95%;
+    height: 50%;
+    white-space: none;
+    justify-self: center;
+  }
+
+  .info-1, .info-4, .info-5, .info-6 {
+    margin-top: 0;
+  }
+}
+</style>
+</body>
+</html>
